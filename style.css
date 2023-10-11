@@ -1,0 +1,12 @@
+* {
+    /* Quand on spécifie une taille, elle prendra en compte la bordure */
+    box-sizing: border-box;
+}
+
+.main-container {
+    /* On organise les enfants de main-container de manière flex */
+    display: flex;
+    
+    /* On les laisse tomber à la ligne s'ils sont trop serrés */
+    flex-wrap: wrap;
+}

@@ -1,7 +1,7 @@
 // Partie principale de mon programme
 
 // Seslection du labyrinthe
-let size = '25';
+let size = '10';
 let ex = 'ex-1';
 let labyData = data[size][ex];
 

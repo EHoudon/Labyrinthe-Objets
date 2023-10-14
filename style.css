@@ -1,12 +1,45 @@
 * {
     /* Quand on spécifie une taille, elle prendra en compte la bordure */
     box-sizing: border-box;
+  
 }
 
 .main-container {
-    /* On organise les enfants de main-container de manière flex */
     display: flex;
-    
-    /* On les laisse tomber à la ligne s'ils sont trop serrés */
     flex-wrap: wrap;
+
+}
+
+/* couleurs:
+Bleu : #258EA6
+Vert : #549F93
+jaune : #F0DFAD
+Rouge : #DB5461
+marron : #443627 */
+
+
+
+.choix_lab{
+    display: flex;
+    margin: 20px;  
+}
+
+.lablab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;   
+}
+
+select, button {  
+    background-color:#F0DFAD;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    border-radius: 5px;
+    border: 1px solid #443627 ;
+    color: #443627;
+    padding: 10px 30px 10px 10px;
+    margin: 10px;
+    text-align: center;
 }

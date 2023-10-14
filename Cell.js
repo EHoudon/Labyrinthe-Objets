@@ -1,34 +1,38 @@
-// Une classe est composée 
-// De données (ici : rowX, columnY, ...)
-// et de méthodes qui agissent sur les données
 
 class Cell {
 
-    // Initialise les champs de la classe
-    // en utilisant cellData (la description de la cellule)
     constructor( cellData ){
         this.rowX = cellData.posX;
         this.columnY = cellData.posY;   
         this.walls = cellData.walls;
         this.width = 50; // largeur en px
+        this.entrance = cellData.entrance;
+        this.exit = cellData.exit
+        this.visited = false;
     }
 
-    // On 'fabrique' une div pour la cellule
     getDOM(){
         let cellDOM = document.createElement('div');
         cellDOM.id = ['cell', this.rowX, this.columnY].join('-')
         cellDOM.style.width = this.width + 'px';
         cellDOM.style.height = this.width + 'px';
-        cellDOM.style.backgroundColor = 'black';
-        cellDOM.style.border = 'solid 1px red';
+        cellDOM.style.backgroundColor = '#F0DFAD';
+        cellDOM.style.border = 'solid 1px #443627';
         cellDOM.style.borderWidth = this.computeBorders();
+        this.Entrée_Sortie(cellDOM);
         return cellDOM;
     }
 
-    // Fonction compliquée qui transforme 
-    // [true, true, false, true] en '1px 1px 0px 1px' 
     computeBorders(){
         return this.walls.map( wall => wall ? '1px' : '0px').join(' ')
+    }
+
+    Entrée_Sortie(cell){
+        if (this.entrance) {
+            cell.style.backgroundColor = '#258EA6';
+        } else if (this.exit) {
+            cell.style.backgroundColor = '#DB5461';
+        }
     }
 
 }

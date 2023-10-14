@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="container"></div>
-
+    <div class="lablab">
+        <div class="choix_lab">
+            <div id="choix1"></div>
+            <div id="choix2"></div>
+            <button type="button" id="button" onclick="newLabyrinthe()">Valider</button>
+        </div>
+        <div id="container"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./data.js"></script>
     <script src="./Cell.js"></script>
     <script src="./Labyrinthe.js"></script>
     <script src="./main.js"></script>
+    <script src="./Selections.js"></script>
 </body>
 </html>
